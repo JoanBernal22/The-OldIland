@@ -8,6 +8,7 @@ public class Oldisland {
 
             Scanner teclado = new Scanner(System.in);
             Random random = new Random();
+           
             
             // Codigos ANSI para los colores
             final String RESET = "\u001B[0m";
@@ -107,28 +108,29 @@ public class Oldisland {
                             energia -= 20;
                             int resultado = random.nextInt(5);
                             if (resultado != 0) {
-                                if (resultado == 1) {
+                            if (resultado == 1) {
                                     cuerda += 1;
-                                    System.out.println(VERDE
-                                            + "Enhorabuena, ahora tienes una cuerda." + RESET);
-                                } else {
-                                    salud -= 1;
-                                    System.out.println(ROJO
-                                            + "Te has lastimado. Pierdes 1 de vida."
-                                            + RESET);
+                            System.out.println(VERDE
+                                     + "Enhorabuena, ahora tienes una cuerda." + RESET);
+                        } else {
+                            salud -= 1;
+                                System.out.println(ROJO
+                                    + "Te has lastimado. Pierdes 1 de vida."
+                                    + RESET);
                                 }       
-                            } else {
-                                madera += 3;
+                        } else {
+                            madera += 3;
                                 System.out.println(VERDE
-                                        + "Obtienes 3 unidades de madera."
-                                        + RESET);
+                                    + "Obtienes 3 unidades de madera."
+                                    + RESET);
                             }
                         } else {
                             System.out.println(ROJO
                                     + "Necesitas descansar, te hace falta energia" + RESET);
                         }
                     }
-                     case 4 -> {
+                     
+                    case 4 -> {
                         energia += 30;
                         if (energia > 100) {
                             energia = 100;
